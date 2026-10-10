@@ -1,0 +1,6 @@
+{
+  "name": "SkillBridge AI",
+  "description": "Personalized career roadmaps, AI guidance, human mentorship, and practical projects for engineering students in AI and ML.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

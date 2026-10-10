@@ -1,0 +1,1021 @@
+import { CareerRoadmap, AcademicYear, CareerTrack, RoadmapModule } from '../types';
+
+export const AI_ENGINEER_MODULES_YEAR1: RoadmapModule[] = [
+  {
+    id: 'ai-y1-m1',
+    title: 'Year 1: Python Programming & Software Engineering Foundations',
+    description: 'Master core Python syntax, OOP, environment management, and modern Git workflows necessary for engineering.',
+    order: 1,
+    yearLevel: '1st Year',
+    estimatedWeeks: 8,
+    topics: [
+      {
+        id: 'ai-topic-python-core',
+        moduleId: 'ai-y1-m1',
+        title: 'Modern Python 3 Fundamentals & Data Structures',
+        description: 'Variables, loops, functions, list comprehensions, dictionaries, sets, and file I/O for scientific computing.',
+        learningObjectives: [
+          'Write idiomatic Python scripts using PEP 8 standards',
+          'Understand memory references, mutability, and time complexity of built-in collections',
+          'Implement modular code with modules and packages',
+        ],
+        prerequisites: ['Basic computer literacy'],
+        estimatedHours: 25,
+        difficulty: 'Beginner',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-py-docs',
+            title: 'Official Python 3 Documentation Tutorial',
+            platform: 'Python.org',
+            url: 'https://docs.python.org/3/tutorial/',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-py-fcc',
+            title: 'Python for Beginners Full Course',
+            platform: 'freeCodeCamp.org YouTube',
+            url: 'https://www.youtube.com/watch?v=eWRfhZUzrAc',
+            type: 'video',
+            duration: '4.5 hours',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'CLI Student Gradebook & Statistical Summary',
+          description: 'Build a Python script that reads CSV student exam scores, computes mean/median/std dev, and exports formatted summary tables.',
+          expectedOutcome: 'A modular Python script runnable from terminal with error handling for missing files.',
+        },
+      },
+      {
+        id: 'ai-topic-git',
+        moduleId: 'ai-y1-m1',
+        title: 'Version Control with Git & GitHub Collaboration',
+        description: 'Branching strategies, merge conflict resolution, pull requests, and README documentation for engineering portfolios.',
+        learningObjectives: [
+          'Initialize repositories and master git add, commit, branch, checkout, and merge',
+          'Work with remote repositories on GitHub and write clean commit messages',
+          'Handle merge conflicts and configure SSH authentication',
+        ],
+        prerequisites: ['Basic terminal navigation'],
+        estimatedHours: 12,
+        difficulty: 'Beginner',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-git-book',
+            title: 'Pro Git Official Book',
+            platform: 'Git-scm',
+            url: 'https://git-scm.com/book/en/v2',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-git-interactive',
+            title: 'Learn Git Branching Interactive Sandbox',
+            platform: 'LearnGitBranching',
+            url: 'https://learngitbranching.js.org/',
+            type: 'interactive',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Multi-branch Feature Workflow Repository',
+          description: 'Create a GitHub repo with a main and development branch, simulate a merge conflict, and resolve it cleanly in VS Code.',
+          expectedOutcome: 'A public GitHub repository with documented commit history showing pull request merge.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ai-y1-m2',
+    title: 'Year 1: Mathematics & Statistics for AI',
+    description: 'The mathematical bedrock for understanding vector spaces, loss gradients, and probability in intelligent systems.',
+    order: 2,
+    yearLevel: '1st Year',
+    estimatedWeeks: 10,
+    topics: [
+      {
+        id: 'ai-topic-linear-algebra',
+        moduleId: 'ai-y1-m2',
+        title: 'Linear Algebra: Vectors, Matrices & Transformations',
+        description: 'Matrix multiplication, dot products, eigenvalues, eigenvectors, and geometric intuition behind vector spaces.',
+        learningObjectives: [
+          'Calculate dot products, cross products, and matrix transformations manually and with NumPy',
+          'Understand vector spaces, basis, and projections used in embeddings',
+          'Visualize linear transformations geometrically',
+        ],
+        prerequisites: ['High school algebra'],
+        estimatedHours: 28,
+        difficulty: 'Beginner',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-3b1b-la',
+            title: 'Essence of Linear Algebra Visual Series',
+            platform: '3Blue1Brown',
+            url: 'https://www.3blue1brown.com/topics/linear-algebra',
+            type: 'video',
+            duration: '15 episodes',
+            isFree: true,
+          },
+          {
+            id: 'res-khan-la',
+            title: 'Linear Algebra Practice Track',
+            platform: 'Khan Academy',
+            url: 'https://www.khanacademy.org/math/linear-algebra',
+            type: 'practice',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'NumPy 2D Transformation & Rotation Visualizer',
+          description: 'Implement 2D affine transformations using NumPy matrices and plot rotated polygons using Matplotlib.',
+          expectedOutcome: 'A Jupyter notebook rendering original vs transformed coordinate matrices.',
+        },
+      },
+      {
+        id: 'ai-topic-multivariate-calculus',
+        moduleId: 'ai-y1-m2',
+        title: 'Multivariate Calculus & Gradient Descent Intuition',
+        description: 'Partial derivatives, gradients, chain rule, and optimization surfaces fundamental to model backpropagation.',
+        learningObjectives: [
+          'Compute partial derivatives and directional gradients',
+          'Understand multivariate chain rule for composite functions',
+          'Implement batch and stochastic gradient descent from scratch',
+        ],
+        prerequisites: ['Single variable calculus', 'Linear Algebra'],
+        estimatedHours: 24,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-3b1b-calc',
+            title: 'Essence of Calculus',
+            platform: '3Blue1Brown',
+            url: 'https://www.3blue1brown.com/topics/calculus',
+            type: 'video',
+            duration: '12 episodes',
+            isFree: true,
+          },
+          {
+            id: 'res-statquest-gd',
+            title: 'StatQuest: Gradient Descent, Step-by-Step',
+            platform: 'StatQuest with Josh Starmer',
+            url: 'https://www.youtube.com/watch?v=sDv4f4s2SB8',
+            type: 'video',
+            duration: '24 mins',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Gradient Descent Minimizer from Scratch',
+          description: 'Write a pure Python script to minimize f(x, y) = x^2 + 2y^2 using gradient updates and plot the convergence loss curve.',
+          expectedOutcome: 'Verified convergence plot demonstrating step size effect on overshoot vs stagnation.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ai-y2-m1',
+    title: 'Year 2: Data Manipulation, DSA & Classical Machine Learning',
+    description: 'Transform raw data with NumPy & Pandas, analyze algorithmic complexity, and implement core supervised models.',
+    order: 3,
+    yearLevel: '2nd Year',
+    estimatedWeeks: 12,
+    topics: [
+      {
+        id: 'ai-topic-pandas-eda',
+        moduleId: 'ai-y2-m1',
+        title: 'Exploratory Data Analysis with NumPy, Pandas & Seaborn',
+        description: 'Data wrangling, cleaning missing values, categorical encoding, feature correlation, and distributions.',
+        learningObjectives: [
+          'Manipulate multi-index DataFrames and perform vector operations',
+          'Detect outliers, handle missing values, and encode categorical variables',
+          'Generate publication-quality visual heatmaps and pairplots',
+        ],
+        prerequisites: ['Python 3 fundamentals'],
+        estimatedHours: 30,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-pandas-docs',
+            title: 'Pandas User Guide & 10 Minutes to Pandas',
+            platform: 'Pandas Docs',
+            url: 'https://pandas.pydata.org/docs/user_guide/10min.html',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-kaggle-eda',
+            title: 'Data Cleaning & Feature Engineering Micro-courses',
+            platform: 'Kaggle Learn',
+            url: 'https://www.kaggle.com/learn',
+            type: 'interactive',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Exploratory Data Analysis on Real-World Dataset',
+          description: 'Perform complete EDA on a Kaggle housing or health dataset with statistical hypothesis testing and outlier imputation.',
+          expectedOutcome: 'Documented Jupyter notebook with 10 visual insights and cleaned DataFrame export.',
+        },
+      },
+      {
+        id: 'ai-topic-supervised-learning',
+        moduleId: 'ai-y2-m1',
+        title: 'Supervised Learning: Regression, Classification & Metrics',
+        description: 'Linear/Logistic regression, Decision Trees, Random Forests, train-test splits, cross-validation, and ROC-AUC curves.',
+        learningObjectives: [
+          'Implement and compare regression vs classification models with Scikit-learn',
+          'Evaluate models using Precision, Recall, F1-Score, and ROC-AUC',
+          'Prevent overfitting with regularization (L1 Lasso, L2 Ridge) and k-fold cross validation',
+        ],
+        prerequisites: ['NumPy/Pandas', 'Linear Algebra'],
+        estimatedHours: 35,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-sklearn-docs',
+            title: 'Scikit-learn User Guide: Supervised Learning',
+            platform: 'Scikit-learn.org',
+            url: 'https://scikit-learn.org/stable/supervised_learning.html',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-statquest-rf',
+            title: 'StatQuest: Random Forests Part 1 - Building, Using and Evaluating',
+            platform: 'StatQuest with Josh Starmer',
+            url: 'https://www.youtube.com/watch?v=J4Wd2-LILxQ',
+            type: 'video',
+            duration: '10 mins',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Customer Churn Classification Benchmark',
+          description: 'Build a Scikit-learn pipeline with StandardScale, OneHotEncoder, and GridSearchCV to optimize a Random Forest classifier.',
+          expectedOutcome: 'F1-score of >0.82 on test split with documented confusion matrix and ROC curve.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ai-y3-m1',
+    title: 'Year 3: Deep Learning, Neural Networks & Generative AI',
+    description: 'Delve into PyTorch, multi-layer perceptrons, convolutional & transformer architectures, and modern LLM application development.',
+    order: 4,
+    yearLevel: '3rd Year',
+    estimatedWeeks: 14,
+    topics: [
+      {
+        id: 'ai-topic-pytorch-foundations',
+        moduleId: 'ai-y3-m1',
+        title: 'Deep Learning Foundations with PyTorch & Autograd',
+        description: 'Tensors, computational graphs, custom nn.Module classes, loss functions, optimizers, and the training loop.',
+        learningObjectives: [
+          'Understand autograd mechanics and backward() tensor passes',
+          'Construct custom PyTorch neural networks with nn.Sequential and custom layers',
+          'Train, evaluate, and save model checkpoints to disk',
+        ],
+        prerequisites: ['Supervised Learning', 'Multivariate Calculus'],
+        estimatedHours: 40,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-pytorch-tutorials',
+            title: 'PyTorch Official 60-Minute Blitz & Tutorials',
+            platform: 'PyTorch.org',
+            url: 'https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-fcc-pytorch',
+            title: 'PyTorch for Deep Learning Full Bootcamp Course',
+            platform: 'freeCodeCamp.org YouTube',
+            url: 'https://www.youtube.com/watch?v=GIsg-ZUy0MY',
+            type: 'video',
+            duration: '26 hours',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Handwritten Digit & Fashion MNIST Classifier in PyTorch',
+          description: 'Implement a 3-layer neural network in PyTorch with Dropout and BatchNorm, achieving 98%+ accuracy on test set.',
+          expectedOutcome: 'Self-contained training script tracking loss and accuracy per epoch.',
+        },
+      },
+      {
+        id: 'ai-topic-transformers-rag',
+        moduleId: 'ai-y3-m1',
+        title: 'Transformers, Embeddings & Retrieval-Augmented Generation (RAG)',
+        description: 'Self-attention mechanism, vector databases (Chroma, Pinecone), semantic search, and building production RAG pipelines.',
+        learningObjectives: [
+          'Understand query, key, value projections and scaled dot-product attention',
+          'Generate and store dense vector embeddings with chunking strategies',
+          'Build end-to-end RAG question answering pipelines with reranking and citation grounding',
+        ],
+        prerequisites: ['PyTorch Foundations', 'Python APIs'],
+        estimatedHours: 45,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-jalammar-transformer',
+            title: 'The Illustrated Transformer',
+            platform: 'Jay Alammar',
+            url: 'https://jalammar.github.io/illustrated-transformer/',
+            type: 'interactive',
+            isFree: true,
+          },
+          {
+            id: 'res-gemini-docs',
+            title: 'Gemini API & Structured Embeddings Documentation',
+            platform: 'Google for Developers',
+            url: 'https://ai.google.dev/gemini-api/docs/embeddings',
+            type: 'documentation',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'University Syllabus RAG Assistant with Citation Grounding',
+          description: 'Build a FastAPI service that indexes course PDF textbooks into a vector store and answers student queries with source citations.',
+          expectedOutcome: 'Running backend API with /query endpoint returning grounded answers and document metadata.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ai-y3-m2',
+    title: 'Year 3: AI Internship Launchpad & High-Yield Portfolio Engineering',
+    description: 'Bridge from prototype models to industry hiring: verify core ML prerequisites, package models into containerized APIs, prepare for internship technical rounds, and deploy public demos.',
+    order: 5,
+    yearLevel: '3rd Year',
+    estimatedWeeks: 10,
+    topics: [
+      {
+        id: 'ai-topic-prereq-diagnostic',
+        moduleId: 'ai-y3-m2',
+        title: 'Core Prerequisites Diagnostic & Algorithmic Refresher',
+        description: 'Fast-track prerequisite verification: vectorized tensor operations, loss gradient checks, and Scikit-learn evaluation metrics (Precision-Recall AUC vs ROC-AUC) without repeating full introductory coursework.',
+        learningObjectives: [
+          'Verify mathematical intuition behind loss optimization and backpropagation',
+          'Audit feature engineering pipelines to prevent test set data leakage',
+          'Select correct evaluation metrics for imbalanced real-world classification',
+        ],
+        prerequisites: ['Python 3', 'Linear Algebra & Calculus'],
+        estimatedHours: 15,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-prereq-sklearn',
+            title: 'Scikit-learn Model Evaluation & Metrics Documentation',
+            platform: 'Scikit-learn.org',
+            url: 'https://scikit-learn.org/stable/modules/model_evaluation.html',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-statquest-metrics',
+            title: 'StatQuest: ROC and AUC, Clearly Explained!',
+            platform: 'StatQuest with Josh Starmer',
+            url: 'https://www.youtube.com/watch?v=4jRBRDbJemM',
+            type: 'video',
+            duration: '16 mins',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Prerequisite Diagnostic Benchmark & Baseline Classifier',
+          description: 'Write a self-contained Python script implementing baseline model evaluation with 5-fold cross-validation and confusion matrix verification.',
+          expectedOutcome: 'Automated evaluation script confirming readiness for advanced deep learning coursework.',
+        },
+      },
+      {
+        id: 'ai-topic-internship-portfolio',
+        moduleId: 'ai-y3-m2',
+        title: 'AI Internship Technical Assessments & API Packaging',
+        description: 'Master competitive internship coding assessments: solve LeetCode/HackerRank data structure challenges, containerize FastAPI model services with Docker, and construct an impactful GitHub portfolio.',
+        learningObjectives: [
+          'Solve Python data structure and algorithmic challenges under interview time constraints',
+          'Package AI model inference services into production Docker containers with OpenAPI documentation',
+          'Deploy interactive web demos (Gradio / Streamlit) showcasing portfolio projects to recruiters',
+        ],
+        prerequisites: ['Deep Learning Foundations', 'FastAPI basics'],
+        estimatedHours: 30,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-fastapi-docker',
+            title: 'FastAPI in Docker Official Guide',
+            platform: 'Tiangolo FastAPI',
+            url: 'https://fastapi.tiangolo.com/deployment/docker/',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-neetcode-dsa',
+            title: 'NeetCode Algorithm Roadmaps & Practice',
+            platform: 'NeetCode.io',
+            url: 'https://neetcode.io/roadmap',
+            type: 'interactive',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Containerized AI Microservice with Public Swagger Spec',
+          description: 'Build and containerize an asynchronous FastAPI service serving a pre-trained model with input validation, latency logging, and Dockerfile.',
+          expectedOutcome: 'Docker container responding to POST /predict requests with OpenAPI documentation and test suite.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ai-y4-m1',
+    title: 'Year 4: AI Systems Architecture, LLMOps & Job Readiness',
+    description: 'Transition from prototype to scalable production AI: latency optimization, caching, evaluations, and technical interview mastery.',
+    order: 6,
+    yearLevel: '4th Year',
+    estimatedWeeks: 10,
+    topics: [
+      {
+        id: 'ai-topic-llmops-eval',
+        moduleId: 'ai-y4-m1',
+        title: 'LLMOps, Evaluation Frameworks & Guardrails',
+        description: 'Automated evaluation metrics (faithfulness, answer relevancy), prompt engineering versioning, semantic caching, and safety guardrails.',
+        learningObjectives: [
+          'Establish automated synthetic evaluation benchmarks (Ragas, DeepEval)',
+          'Implement rate-limiting, semantic caching (Redis), and token cost monitoring',
+          'Add input validation and output guardrails to prevent hallucination and prompt injections',
+        ],
+        prerequisites: ['Transformers & RAG', 'FastAPI'],
+        estimatedHours: 35,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-ragas-docs',
+            title: 'Ragas Evaluation Architecture',
+            platform: 'Ragas Docs',
+            url: 'https://docs.ragas.io/',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-fullstack-llm',
+            title: 'Building LLM Applications for Production',
+            platform: 'Chip Huyen Blog',
+            url: 'https://huyenchip.com/2023/04/11/llm-engineering.html',
+            type: 'documentation',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Production AI Evaluation Harness & Latency Benchmark',
+          description: 'Deploy an automated test suite measuring latency p95, token cost, and faithfulness scores across 50 gold-standard queries.',
+          expectedOutcome: 'Automated CI test run producing an evaluation report with latency and accuracy metrics.',
+        },
+      },
+      {
+        id: 'ai-topic-interview-capstone',
+        moduleId: 'ai-y4-m1',
+        title: 'AI Engineering Portfolio Polish & System Design Interviews',
+        description: 'Large-scale system design (designing multimodal search, recommendation engines), GitHub packaging, and live technical interviews.',
+        learningObjectives: [
+          'Master AI System Design: trade-offs between fine-tuning, RAG, and prompt chaining',
+          'Document capstone project with architectural diagrams, latency benchmarks, and Docker setup',
+          'Rehearse coding and behavioral interviews for Tier-1 AI roles',
+        ],
+        prerequisites: ['All prior modules'],
+        estimatedHours: 30,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-sys-design-primer',
+            title: 'The System Design Primer',
+            platform: 'GitHub / Donne Martin',
+            url: 'https://github.com/donnemartin/system-design-primer',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-ml-interviews',
+            title: 'Machine Learning Systems Design Interview Guide',
+            platform: 'Interviewing.io',
+            url: 'https://interviewing.io/guides/system-design-interview',
+            type: 'practice',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'End-to-End Capstone AI Showcase & Architecture Spec',
+          description: 'Write a comprehensive RFC-style system design document and deploy your capstone app with Docker and live URL.',
+          expectedOutcome: 'Live deployed application, clean GitHub repository with architectural diagram, and video demo walkthrough.',
+        },
+      },
+    ],
+  },
+];
+
+export const ML_ENGINEER_MODULES_YEAR1: RoadmapModule[] = [
+  {
+    id: 'ml-y1-m1',
+    title: 'Year 1: Python Engineering & Computational Math',
+    description: 'Core software construction, algorithm complexity, linear algebra, and multivariable calculus for modeling.',
+    order: 1,
+    yearLevel: '1st Year',
+    estimatedWeeks: 8,
+    topics: [
+      {
+        id: 'ml-topic-py-scientific',
+        moduleId: 'ml-y1-m1',
+        title: 'Scientific Python: Vectorization with NumPy',
+        description: 'Broadcasting, tensor slicing, memory layout (C vs Fortran contiguous), and fast vectorized linear operations.',
+        learningObjectives: [
+          'Eliminate slow Python loops using vectorized NumPy routines',
+          'Understand memory allocation and strided views of arrays',
+          'Implement distance matrices and matrix decompositions efficiently',
+        ],
+        prerequisites: ['Basic Python'],
+        estimatedHours: 25,
+        difficulty: 'Beginner',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-numpy-docs',
+            title: 'NumPy Quickstart & Absolute Beginners Guide',
+            platform: 'NumPy.org',
+            url: 'https://numpy.org/doc/stable/user/quickstart.html',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-fcc-numpy',
+            title: 'Complete Python NumPy Tutorial for Data Science',
+            platform: 'Keith Galli / freeCodeCamp',
+            url: 'https://www.youtube.com/watch?v=QUT1VHiLmmI',
+            type: 'video',
+            duration: '1 hour',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Vectorized Euclidean & Cosine Distance Calculator',
+          description: 'Compute pairwise distance matrix for 10,000 vectors without nested loops and benchmark execution speed vs pure Python.',
+          expectedOutcome: 'A 50x speedup benchmark comparison script with timing logs.',
+        },
+      },
+      {
+        id: 'ml-topic-prob-stats',
+        moduleId: 'ml-y1-m1',
+        title: 'Probability Distributions & Inferential Statistics',
+        description: 'Random variables, Bayes rule, Normal/Bernoulli/Poisson distributions, Maximum Likelihood Estimation (MLE), and hypothesis tests.',
+        learningObjectives: [
+          'Calculate conditional probability and apply Bayes theorem to classification',
+          'Derive Maximum Likelihood Estimator for Gaussian distribution parameters',
+          'Conduct two-sample t-tests and understand p-values and confidence intervals',
+        ],
+        prerequisites: ['Basic Calculus'],
+        estimatedHours: 26,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-khan-stats',
+            title: 'Probability and Statistics Track',
+            platform: 'Khan Academy',
+            url: 'https://www.khanacademy.org/math/statistics-probability',
+            type: 'practice',
+            isFree: true,
+          },
+          {
+            id: 'res-statquest-prob',
+            title: 'StatQuest: The Normal Distribution, Clearly Explained',
+            platform: 'StatQuest with Josh Starmer',
+            url: 'https://www.youtube.com/watch?v=QA8SMa1m41Q',
+            type: 'video',
+            duration: '12 mins',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'A/B Testing Simulator with Scipy.stats',
+          description: 'Simulate user conversion rates across two website variants, conduct hypothesis tests, and compute statistical power.',
+          expectedOutcome: 'Complete analysis report with confidence interval charts and p-value validation.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ml-y2-m1',
+    title: 'Year 2: Classical Machine Learning & Feature Engineering',
+    description: 'Feature scaling, dimensionality reduction (PCA), supervised models, ensemble methods, and unsupervised clustering.',
+    order: 2,
+    yearLevel: '2nd Year',
+    estimatedWeeks: 12,
+    topics: [
+      {
+        id: 'ml-topic-supervised-algorithms',
+        moduleId: 'ml-y2-m1',
+        title: 'Supervised Learning & Ensemble Methods (XGBoost, LightGBM)',
+        description: 'Linear/Logistic models, SVM with kernel trick, Decision Trees, Random Forests, and Gradient Boosted Decision Trees.',
+        learningObjectives: [
+          'Understand loss minimization mechanics of AdaBoost and Gradient Boosting',
+          'Tune hyperparameters (learning rate, max depth, subsample) using Optuna',
+          'Interpret feature importances with SHAP values',
+        ],
+        prerequisites: ['Probability & Stats', 'NumPy'],
+        estimatedHours: 40,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-statquest-xgboost',
+            title: 'StatQuest: XGBoost Part 1 - Regression Trees',
+            platform: 'StatQuest with Josh Starmer',
+            url: 'https://www.youtube.com/watch?v=OtD8wVaFm6E',
+            type: 'video',
+            duration: '26 mins',
+            isFree: true,
+          },
+          {
+            id: 'res-xgboost-docs',
+            title: 'XGBoost Official Documentation and Tutorials',
+            platform: 'XGBoost Docs',
+            url: 'https://xgboost.readthedocs.io/',
+            type: 'documentation',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Kaggle Tabular Competition Model Pipeline',
+          description: 'Build an end-to-end ensemble pipeline with Scikit-learn and LightGBM with 5-fold cross-validation and SHAP feature analysis.',
+          expectedOutcome: 'Rank in top 20% validation score on benchmark tabular dataset with SHAP summary plot.',
+        },
+      },
+      {
+        id: 'ml-topic-feature-engineering',
+        moduleId: 'ml-y2-m1',
+        title: 'Feature Engineering, Imputation & PCA Dimensionality Reduction',
+        description: 'Target encoding, frequency encoding, handling high-cardinality features, power transforms, and Principal Component Analysis.',
+        learningObjectives: [
+          'Derive principal components via Singular Value Decomposition (SVD)',
+          'Build robust Scikit-learn Transformer classes without data leakage',
+          'Handle class imbalance with SMOTE and class-weight balancing',
+        ],
+        prerequisites: ['Supervised Learning'],
+        estimatedHours: 30,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-3b1b-pca',
+            title: 'StatQuest: Principal Component Analysis (PCA), Step-by-Step',
+            platform: 'StatQuest with Josh Starmer',
+            url: 'https://www.youtube.com/watch?v=FgakZw6K1QQ',
+            type: 'video',
+            duration: '22 mins',
+            isFree: true,
+          },
+          {
+            id: 'res-feature-eng-book',
+            title: 'Scikit-learn Preprocessing & Feature Engineering Guide',
+            platform: 'Scikit-learn Docs',
+            url: 'https://scikit-learn.org/stable/modules/preprocessing.html',
+            type: 'documentation',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'High-Dimensional Gene/Sensor Data Compression via PCA',
+          description: 'Reduce 100+ feature sensor dataset to 5 principal components explaining >85% variance and train classifier.',
+          expectedOutcome: 'Scree plot and 2D visualization of clustered latent space.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ml-y3-m1',
+    title: 'Year 3: Deep Learning & Production MLOps Pipelines',
+    description: 'PyTorch deep architectures, experiment tracking with MLflow, containerization with Docker, and model serving.',
+    order: 3,
+    yearLevel: '3rd Year',
+    estimatedWeeks: 14,
+    topics: [
+      {
+        id: 'ml-topic-mlops-mlflow',
+        moduleId: 'ml-y3-m1',
+        title: 'Experiment Tracking, Artifact Versioning & MLflow',
+        description: 'Tracking parameters, metrics, model registry, artifact storage (MinIO/S3), and reproducible training runs.',
+        learningObjectives: [
+          'Set up local and remote MLflow tracking servers',
+          'Log model weights, training graphs, hyperparameters, and ROC metrics',
+          'Promote models through Staging and Production registry stages',
+        ],
+        prerequisites: ['Classical ML', 'Docker basics'],
+        estimatedHours: 35,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-mlflow-docs',
+            title: 'MLflow Official Quickstart & Architecture',
+            platform: 'MLflow.org',
+            url: 'https://mlflow.org/docs/latest/index.html',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-made-with-ml',
+            title: 'Made With ML: MLOps Guide by Goku Mohandas',
+            platform: 'MadeWithML',
+            url: 'https://madewithml.com/',
+            type: 'documentation',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Automated MLflow Experiment Tracking Pipeline',
+          description: 'Instrument an image/tabular training script to log hyperparameters and model artifacts automatically to MLflow UI.',
+          expectedOutcome: 'Running local MLflow server with 5 registered model versions and comparative metrics.',
+        },
+      },
+      {
+        id: 'ml-topic-model-serving-fastapi',
+        moduleId: 'ml-y3-m1',
+        title: 'High-Throughput Model Serving with FastAPI & Docker',
+        description: 'Building asynchronous REST inference APIs, input payload validation with Pydantic, batch prediction, and containerization.',
+        learningObjectives: [
+          'Package Scikit-learn/PyTorch models into production Docker containers',
+          'Write asynchronous FastAPI endpoints with input validation and schema validation',
+          'Profile inference latency and implement batching strategies',
+        ],
+        prerequisites: ['PyTorch Foundations', 'Python FastAPI'],
+        estimatedHours: 38,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-fastapi-docs',
+            title: 'FastAPI Official Documentation',
+            platform: 'Tiangolo FastAPI',
+            url: 'https://fastapi.tiangolo.com/tutorial/',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-docker-curriculum',
+            title: 'Docker for Data Scientists & ML Engineers',
+            platform: 'Docker Curriculum',
+            url: 'https://docker-curriculum.com/',
+            type: 'interactive',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Dockerized Microservice for Real-Time Inference',
+          description: 'Containerize a trained credit risk model with FastAPI, Dockerfile, and health-check endpoints responding in <30ms.',
+          expectedOutcome: 'Docker container responding to POST /predict requests with OpenAPI documentation.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ml-y3-m2',
+    title: 'Year 3: ML Internship Preparation & Advanced Portfolio Development',
+    description: 'Prepare for competitive machine learning internship drives: solve algorithmic challenges, benchmark Kaggle pipelines, deploy containerized inference APIs, and review essential prerequisites.',
+    order: 4,
+    yearLevel: '3rd Year',
+    estimatedWeeks: 10,
+    topics: [
+      {
+        id: 'ml-topic-prereq-refresher',
+        moduleId: 'ml-y3-m2',
+        title: 'Mathematical & Algorithmic Prerequisites Verification',
+        description: 'Targeted diagnostic on key prerequisite foundations: matrix decompositions, gradient derivations, and cross-validation integrity without repeating full introductory syntax.',
+        learningObjectives: [
+          'Verify mathematical fluency in matrix multiplication, eigenvalues, and gradient descent',
+          'Identify and eliminate data leakage in pre-processing pipelines',
+          'Select cost-sensitive loss functions for high-cardinality and imbalanced datasets',
+        ],
+        prerequisites: ['Python 3', 'Multivariate Calculus'],
+        estimatedHours: 15,
+        difficulty: 'Intermediate',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-ml-math-refresher',
+            title: 'Mathematics for Machine Learning Textbook & Exercises',
+            platform: 'Cambridge University Press / MML Book',
+            url: 'https://mml-book.github.io/',
+            type: 'documentation',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Matrix Operations & Gradient Check Verification',
+          description: 'Implement numerical gradient checking in pure NumPy to verify analytic gradient calculations against numerical approximations.',
+          expectedOutcome: 'Python script showing relative error < 1e-7 between analytic and numerical gradients.',
+        },
+      },
+      {
+        id: 'ml-topic-internship-prep',
+        moduleId: 'ml-y3-m2',
+        title: 'ML Internship Technical Assessments & Benchmark Packaging',
+        description: 'Master live coding assessments on HackerRank/LeetCode, package Scikit-learn/PyTorch inference pipelines with Docker, and construct an impactful engineering resume.',
+        learningObjectives: [
+          'Solve medium-level algorithmic challenges in Python under time constraints',
+          'Document Kaggle/benchmark tabular models with SHAP feature importance charts',
+          'Package models into Docker containers with sub-30ms p95 latency targets',
+        ],
+        prerequisites: ['Classical ML', 'PyTorch Foundations'],
+        estimatedHours: 30,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-chip-huyen-interviews',
+            title: 'Machine Learning Interviews Book by Chip Huyen',
+            platform: 'GitHub / Chip Huyen',
+            url: 'https://huyenchip.com/ml-interviews-book/',
+            type: 'documentation',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'End-to-End Tabular Benchmark with Clean GitHub Packaging',
+          description: 'Build a Scikit-learn or LightGBM model pipeline with Optuna hyperparameter tuning, export model artifacts, and publish a clean README with performance metrics.',
+          expectedOutcome: 'Reproducible repository with requirements.txt, benchmark evaluation report, and inference script.',
+        },
+      },
+    ],
+  },
+  {
+    id: 'ml-y4-m1',
+    title: 'Year 4: Distributed Training, Drift Monitoring & Industry Capstone',
+    description: 'Data drift detection (Evidently AI), scalable batch inference, CI/CD for machine learning, and interview preparation.',
+    order: 5,
+    yearLevel: '4th Year',
+    estimatedWeeks: 10,
+    topics: [
+      {
+        id: 'ml-topic-drift-monitoring',
+        moduleId: 'ml-y4-m1',
+        title: 'Model Monitoring, Data Drift & Continuous Retraining',
+        description: 'Covariate shift, concept drift, Kolmogorov-Smirnov test on streaming data, and automated alerting pipelines.',
+        learningObjectives: [
+          'Detect statistical data drift in production features using Evidently AI',
+          'Set up automated retraining triggers when performance degrades',
+          'Design telemetry dashboards for prediction distribution tracking',
+        ],
+        prerequisites: ['Model Serving', 'MLOps'],
+        estimatedHours: 32,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-evidently-docs',
+            title: 'Evidently AI: ML System Monitoring Documentation',
+            platform: 'Evidently AI',
+            url: 'https://docs.evidentlyai.com/',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-chip-mlops',
+            title: 'Designing Machine Learning Systems by Chip Huyen',
+            platform: 'O’Reilly / Chip Huyen',
+            url: 'https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/',
+            type: 'book',
+            isFree: false,
+          },
+        ],
+        practicalExercise: {
+          title: 'Production Drift Detection Dashboard with Evidently AI',
+          description: 'Simulate production data drift by shifting feature means and generate an automated HTML drift report and retraining alert.',
+          expectedOutcome: 'Automated drift detection report identifying 3 drifting numerical columns with p-value < 0.05.',
+        },
+      },
+      {
+        id: 'ml-topic-capstone-interview',
+        moduleId: 'ml-y4-m1',
+        title: 'ML Engineering Capstone & Technical System Design',
+        description: 'Architecting large-scale recommendation systems, ad-click prediction, and preparing for ML engineering coding rounds.',
+        learningObjectives: [
+          'Design scalable ML system architectures (Two-tower recommender, feature stores like Feast)',
+          'Solve complex Python data structures & algorithm problems under time constraints',
+          'Synthesize portfolio projects into an impactful engineering resume',
+        ],
+        prerequisites: ['All ML Engineering modules'],
+        estimatedHours: 35,
+        difficulty: 'Advanced',
+        isRequired: true,
+        resources: [
+          {
+            id: 'res-feast-docs',
+            title: 'Feast Feature Store Official Documentation',
+            platform: 'Feast Docs',
+            url: 'https://docs.feast.dev/',
+            type: 'documentation',
+            isFree: true,
+          },
+          {
+            id: 'res-ml-sys-design',
+            title: 'Machine Learning Systems Design Case Studies',
+            platform: 'Chip Huyen / GitHub',
+            url: 'https://github.com/chiphuyen/machine-learning-systems-design',
+            type: 'documentation',
+            isFree: true,
+          },
+        ],
+        practicalExercise: {
+          title: 'Complete End-to-End MLOps Capstone with CI/CD',
+          description: 'Deploy a full pipeline: GitHub Actions CI testing, Docker container build, FastAPI serving, and automated drift alerts.',
+          expectedOutcome: 'Production repository with continuous integration passing all unit and inference latency tests.',
+        },
+      },
+    ],
+  },
+];
+
+export function getRoadmapForStudent(
+  track: CareerTrack,
+  year: AcademicYear
+): CareerRoadmap {
+  const isAi = track === 'AI Engineer';
+  const baseModules = isAi ? AI_ENGINEER_MODULES_YEAR1 : ML_ENGINEER_MODULES_YEAR1;
+
+  if (year === '1st Year') {
+    // 4-year comprehensive undergraduate plan: Covers Years 1, 2, 3, and 4
+    const y1Modules = baseModules.filter(m => m.id !== 'ai-y3-m2' && m.id !== 'ml-y3-m2');
+    return {
+      id: `${track.toLowerCase().replace(/\s+/g, '-')}-year1`,
+      track,
+      academicYear: year,
+      title: `${track} — Complete 4-Year Undergraduate Roadmap (Years 1–4)`,
+      description: 'A comprehensive, structured 4-year curriculum starting from programming fundamentals, Python, mathematics, problem-solving, and Git all the way to advanced deep learning, production systems, and capstone deployment.',
+      totalHours: y1Modules.reduce((acc, m) => acc + m.topics.reduce((sum, t) => sum + t.estimatedHours, 0), 0),
+      modules: y1Modules,
+    };
+  }
+
+  if (year === '2nd Year') {
+    // 3 remaining years: Covers Year 2, Year 3, and Year 4
+    // Starts at intermediate level without repeating first-year foundations as main curriculum.
+    // Covers data structures, statistics, classical ML, model evaluation, and progresses to deep learning and final-year capstones.
+    const y2Modules = baseModules.filter(m =>
+      (m.yearLevel === '2nd Year' || m.yearLevel === '3rd Year' || m.yearLevel === '4th Year') &&
+      m.id !== 'ai-y3-m2' && m.id !== 'ml-y3-m2'
+    );
+    return {
+      id: `${track.toLowerCase().replace(/\s+/g, '-')}-year2`,
+      track,
+      academicYear: year,
+      title: `${track} — 3-Year Undergraduate Roadmap (Years 2–4)`,
+      description: 'Tailored for 2nd Year students: Covers your remaining 3 academic years (Years 2, 3, and 4). Starts at an intermediate level covering data manipulation, DSA, statistics, core machine learning, and model evaluation, then progresses into deep learning, deployment, portfolio development, internships, and final-year career preparation.',
+      totalHours: y2Modules.reduce((acc, m) => acc + m.topics.reduce((sum, t) => sum + t.estimatedHours, 0), 0),
+      modules: y2Modules,
+    };
+  }
+
+  if (year === '3rd Year') {
+    // 2 remaining years: Covers Year 3 and Year 4 ONLY!
+    // Does NOT display the second-year roadmap or make the student repeat the entire second-year curriculum.
+    // Prioritizes advanced machine learning, deep learning, specialization, model deployment, practical projects, portfolio development, internship preparation, suitable internship opportunities, and Year 4 job-readiness activities.
+    // Includes foundational concepts only as targeted prerequisite verification.
+    const y3Modules = baseModules.filter(m =>
+      m.yearLevel === '3rd Year' || m.yearLevel === '4th Year'
+    );
+    return {
+      id: `${track.toLowerCase().replace(/\s+/g, '-')}-year3`,
+      track,
+      academicYear: year,
+      title: `${track} — 2-Year Intensive Career & Degree Roadmap (Years 3–4)`,
+      description: 'Tailored for 3rd Year students: Covers only your remaining 2 academic years (Years 3 and 4). Prioritizes advanced deep learning, track specialization, model deployment, practical portfolio projects, and internship preparation with diagnostic prerequisite verification without repeating the full 2nd-year curriculum.',
+      totalHours: y3Modules.reduce((acc, m) => acc + m.topics.reduce((sum, t) => sum + t.estimatedHours, 0), 0),
+      modules: y3Modules,
+    };
+  }
+
+  // 4th Year: Career-Readiness & Skill-Gap Mode
+  // For fourth-year students, do NOT include regular multi-year roadmap modules or sprint modules.
+  return {
+    id: `${track.toLowerCase().replace(/\s+/g, '-')}-year4`,
+    track,
+    academicYear: year,
+    title: `${track} — Senior Year Career-Readiness & Skill-Gap Dashboard`,
+    description: 'Designed exclusively for final-year engineering students: focuses on skill-gap diagnostics, high-yield concept revision, production capstones, final-year internships, and entry-level interview mastery.',
+    totalHours: 0,
+    modules: [],
+  };
+}
+
